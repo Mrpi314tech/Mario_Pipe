@@ -12,14 +12,14 @@ echo "Creating application"
 
 mkdir -p ~/.local/share/applications
 echo "[Desktop Entry]
-Name=UC37
-Comment=UC37 the AI
+Name=Mario Pipe
+Comment=Hacked NES simple code
 Exec=python3  ${location}/Mario_Pipe/mario_pipe.py
 Icon=${location}/Mario_Pipe/mario.png
 Terminal=true
 Type=Application
 Categories=Programming;
-StartupNotify=true" > ~/.local/share/applications/UC37.desktop
+StartupNotify=true" > ~/.local/share/applications/Mario_pipe.desktop
 
 echo "#!/bin/bash
 python3  ${location}/Mario_Pipe/mario_pipe.py"' "$@"' | sudo tee /usr/local/bin/Mario mkdir -p /usr/local/bin
