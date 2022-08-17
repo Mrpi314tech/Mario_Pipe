@@ -1,9 +1,11 @@
+import os
+filel=os.path.expanduser('~')+"/"
 #default
-default = '/home/mrpi314/Music/Super_Mario_Bros.mp3'
+default = filel+'Mario_Pipe/sounds/Super_Mario_Bros.mp3'
 #other options:
 #Careless Whisper:
-a = '/home/mrpi314/Music/Careless_whisper.mp3'
-wstp=input('what song? (a=Mario theme b=Careless whisper ')
+a = filel+'Mario_Pipe/sounds/Careless_whisper.mp3'
+wstp=input('what song? (a=Mario theme b=Careless whisper) ')
 if 'a' in wstp:
     song=default
 elif 'b' in wstp:
@@ -41,13 +43,13 @@ while True:
                 #lcd.text(str(tmr), 1)
         if tmr == 100:
             mixer.music.set_volume(0)
-            mixer.Channel(1).play(mixer.Sound('/home/mrpi314/Music/smb_warning.wav'))
+            mixer.Channel(1).play(mixer.Sound(filel+'Mario_Pipe/sounds/smb_warning.wav'))
             timey.sleep(2)
             mixer.music.set_volume(1)
         if tmr == 0:
             mixer.music.stop()
             timey.sleep(1)
-            mixer.Channel(2).play(mixer.Sound('/home/mrpi314/Music/smb_mariodie.wav'))
+            mixer.Channel(2).play(mixer.Sound(filel+'Mario_Pipe/sounds/smb_mariodie.wav'))
             tmr='Game Over'
             lcd.text(tmr, 1)
         check, frame = video.read()
@@ -86,7 +88,7 @@ while True:
             video.release()
             cv2.destroyAllWindows()
             if entx == 0:
-                mixer.music.load("/home/mrpi314/Music/Mario_Pipe.mp3")
+                mixer.music.load(filel+'Mario_Pipe/sounds/Mario_Pipe.mp3')
                 mixer.music.play()
                 timey.sleep(0.8)
                 mixer.music.load(song)
@@ -96,7 +98,7 @@ while True:
                 break
             else:
                 mixer.music.stop()
-                mixer.music.load("/home/mrpi314/Music/Mario_Pipe.mp3")
+                mixer.music.load(filel+'Mario_Pipe/sounds/Mario_Pipe.mp3')
                 mixer.music.play()
                 timey.sleep(3)
                 entx = 0
@@ -113,7 +115,7 @@ while True:
                 break
             else:
                 mixer.music.stop()
-                mixer.music.load("/home/mrpi314/Music/Mario_Pipe.mp3")
+                mixer.music.load(filel+'Mario_Pipe/sounds/Mario_Pipe.mp3')
                 mixer.music.play()
                 timey.sleep(3)
                 entx = 0
@@ -133,7 +135,7 @@ while True:
                     break
                 else:
                     mixer.music.stop()
-                    mixer.music.load("/home/mrpi314/Music/Mario_Pipe.mp3")
+                    mixer.music.load(filel+'Mario_Pipe/sounds/Mario_Pipe.mp3')
                     mixer.music.play()
                     timey.sleep(3)
                     entx = 0
