@@ -3,31 +3,11 @@ default = '/home/mrpi314/Music/Super_Mario_Bros.mp3'
 #other options:
 #Careless Whisper:
 a = '/home/mrpi314/Music/Careless_whisper.mp3'
-#Digital World:
-b = '/home/mrpi314/UC37software/sounds/digital-world.mp3'
-#Jazz
-c = '/home/mrpi314/UC37software/sounds/jazz.mp3'
-#Monkeys Spinning Monkeys
-d = '/home/mrpi314/UC37software/sounds/Monkeys-Spinning-Monkeys.mp3'
-#Fluffing a Duck
-e = '/home/mrpi314/UC37software/sounds/Fluffing-a-Duck.mp3'
-#play by the disk:
-disk = '/media/mrpi314/drive/Game/theme.mp3'
-wstp=input('what song? ')
-if 'default' in wstp:
+wstp=input('what song? (a=Mario theme b=Careless whisper ')
+if 'a' in wstp:
     song=default
-elif 'a' in wstp:
-    song=a
 elif 'b' in wstp:
-    song=b
-elif 'c' in wstp:
-    song=c
-elif 'd' in wstp:
-    song=d
-elif 'e' in wstp:
-    song=e
-elif 'disk' in wstp:
-    song=disk
+    song=a
 else:
     song=default
 from pygame import mixer
