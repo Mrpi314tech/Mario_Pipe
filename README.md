@@ -5,4 +5,8 @@ This is a simple code to make the Mark Rober Hacked NES. All you need is a Raspb
 https://www.youtube.com/watch?v=QW5L2fMriZk&skip_registered_account_check=true
 
 ### Setup
-To setup, place camera in doorway and run the program
+run this command:
+```bash
+git clone https://github.com/Mrpi314tech/Mario_Pipe && chmod +x ~/Mario_Pipe/install.sh && ~/Mario_Pipe/install.sh
+```
+to setup, place camera in doorway and run the program
