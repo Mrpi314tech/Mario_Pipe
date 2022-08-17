@@ -1,5 +1,6 @@
 #!/bin/bash
 location="$HOME"
+chmod +x ~/Mario_Pipe/remove.sh
 cd $HOME
 if [[ "$(id -u)" == 0 ]]; then
   echo "Mario pipe should not be installed as root!"
