@@ -9,4 +9,9 @@ run this command:
 ```bash
 git clone https://github.com/Mrpi314tech/Mario_Pipe && chmod +x ~/Mario_Pipe/install.sh && ~/Mario_Pipe/install.sh
 ```
-to setup, place camera in doorway and run the program
+place camera in doorway and run the program. Use it as in the video.
+
+### Remove
+```bash
+~/Mario_Pipe/remove.sh
+```
