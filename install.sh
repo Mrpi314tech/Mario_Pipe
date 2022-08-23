@@ -8,7 +8,7 @@ if [[ "$(id -u)" == 0 ]]; then
   exit 1
 fi
 echo "Downloading Open CV"
-pip install opencv-python
+sudo apt install python3-opencv
 echo "Creating application"
 
 mkdir -p ~/.local/share/applications
